@@ -1,6 +1,6 @@
 # Network: Web App Chat
 
-**Network** is a full-stack web chat application built using the MERN stack. Engage in real-time conversations, connect with peers, and be a part of the growing Network community.
+Network is a full-stack web chat application built using the MERN stack. Engage in real-time conversations, connect with peers, and be a part of the growing Network community.
 
 ## Table of Contents
 
@@ -9,9 +9,9 @@
 
 ## Features
 
-- **Real-time Chatting**: Engage in real-time conversations with users.
-- **User Authentication**: Secure signup and login functionality.
-- **Responsive Design**: Optimized for both desktop and mobile devices.
+- Real-time Chatting: Engage in real-time conversations with users.
+- User Authentication: Secure signup and login functionality.
+- Responsive Design: Optimized for both desktop and mobile devices.
 
 ## Technologies Used
 

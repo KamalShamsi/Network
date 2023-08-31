@@ -1,1 +1,21 @@
-This is full stack web app built with MERN stack.
+# Network: Web App Chat
+
+**Network** is a full-stack web chat application built using the MERN stack. Engage in real-time conversations, connect with peers, and be a part of the growing Network community.
+
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+
+## Features
+
+- **Real-time Chatting**: Engage in real-time conversations with users.
+- **User Authentication**: Secure signup and login functionality.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+
+## Technologies Used
+
+- **M**ongoDB: A NoSQL database.
+- **E**xpress.js: Back-end web application framework running on top of Node.js.
+- **R**eact: A JavaScript front-end library for building user interfaces.
+- **N**ode.js: JavaScript runtime built on Chrome's V8 JavaScript engine.

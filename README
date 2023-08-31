@@ -15,7 +15,7 @@ Network is a full-stack web chat application built using the MERN stack. Engage 
 
 ## Technologies Used
 
-- **M**ongoDB: A NoSQL database.
-- **E**xpress.js: Back-end web application framework running on top of Node.js.
-- **R**eact: A JavaScript front-end library for building user interfaces.
-- **N**ode.js: JavaScript runtime built on Chrome's V8 JavaScript engine.
+- MongoDB: A NoSQL database.
+- Express.js: Back-end web application framework running on top of Node.js.
+- React: A JavaScript front-end library for building user interfaces.
+- Node.js: JavaScript runtime built on Chrome's V8 JavaScript engine.

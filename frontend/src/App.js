@@ -1,13 +1,12 @@
 import './App.css';
-import { Spinner } from "@chakra-ui/spinner"
+import { Route } from "react-router-dom";
+import  HomePage from "./Pages/HomePage";
+import  ChatPage from "./Pages/ChatPage";
 
 function App() {
   return <div className="App">
-      <Spinner size='xs' />
-      <Spinner size='sm' />
-      <Spinner size='md' />
-      <Spinner size='lg' />
-      <Spinner size='xl' />
+    <Route path="/" component={HomePage} exact/>
+    <Route path="/chats" component={ChatPage}/>
   </div>
 }
 export default App;

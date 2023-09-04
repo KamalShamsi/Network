@@ -1,19 +1,24 @@
+// Importing necessary dependencies.
 import axios from 'axios'
-import React from 'react'
-import { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
+// ChatPage component for displaying chat messages.
 const ChatPage = () => {
+    // State to hold the chats fetched from the server.
     const [chats, setChats] = useState([]);
-    const fetchChats = async() => {
-        const {data} = await axios.get('/api/chat')
 
+    // Function to fetch chats from the server using axios.
+    const fetchChats = async() => {
+        const {data} = await axios.get('/api/chat');
         setChats(data);
     };
 
+    // Using useEffect to initiate the chat fetch when the component mounts.
     useEffect(() => {
         fetchChats();
     }, [])
+
+    // Rendering the list of chats.
     return (
         <div>
             {chats.map((chat) => (
@@ -23,4 +28,5 @@ const ChatPage = () => {
     )
 }
 
-export default ChatPage
+// Exporting ChatPage component for use in other parts of the app.
+export default ChatPage;

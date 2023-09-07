@@ -11,9 +11,8 @@ import {
     Flex
 } from "@chakra-ui/react";
 
-/*import Login from "../Components/Authentication/Login";
+import Login from "../Components/Authentication/Login";
 import SignUp from "../Components/Authentication/SignUp";
-*/
 
 // Define the Homepage functional component
 function Homepage() { 
@@ -50,11 +49,11 @@ function Homepage() {
                     <TabPanels>
                         {/* Login tab content */}
                         <TabPanel>
-                            <div>Login components...</div>
+                            <Login/>
                         </TabPanel>
                         {/* Sign Up tab content */}
                         <TabPanel>
-                            <div>Sign Up components...</div>
+                            <SignUp/>
                         </TabPanel>
                     </TabPanels>
                 </Tabs>

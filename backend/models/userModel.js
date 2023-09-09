@@ -14,8 +14,7 @@ const userSchema = mongoose.Schema({
 
     // Profile picture URL of the user. If not provided, a default anonymous avatar is used
     pic: { 
-        type: String, 
-        required: true, 
+        type: String,
         default: "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg"
     },
 },

@@ -2,12 +2,16 @@
 const express = require("express");       // Express.js framework for server
 const { chats } = require("./data/data"); // Mock chat data
 const dotenv = require("dotenv");         // To handle environment variables
+const connectDB = require("./config/db");
 
-// Initializing the express app
-const app = express();
 
 // Loading environment variables
 dotenv.config();
+
+connectDB();
+
+// Initializing the express app
+const app = express();
 
 // Basic route to check if API is running
 app.get("/", (req, res) => {
@@ -30,4 +34,4 @@ app.get("/api/chat/:id", (req,res) => {
 const PORT = process.env.PORT || 5000;
 
 // Starting the server on the defined port
-app.listen(PORT, () => console.log(`Server Started on Port ${PORT}`));
+app.listen(PORT, () => console.log(`Server Started on Port ${PORT}`.yellow.bold));

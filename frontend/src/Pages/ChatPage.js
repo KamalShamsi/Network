@@ -1,32 +1,25 @@
-// Importing necessary dependencies.
-import axios from 'axios'
-import React, { useState, useEffect } from 'react'
+import { Box } from "@chakra-ui/layout";
+import { useState } from "react";
+import Chatbox from "../Components/Chatbox";
+import MyChats from "../Components/MyChats";
+import { ChatState } from "../Context/ChatProvider";
+import SideDrawer from "../Components/miscellaneous/SideDrawer";
 
-// ChatPage component for displaying chat messages.
-const ChatPage = () => {
-    // State to hold the chats fetched from the server.
-    const [chats, setChats] = useState([]);
+const Chatpage = () => {
+  const [fetchAgain, setFetchAgain] = useState(false);
+  const { user } = ChatState();
 
-    // Function to fetch chats from the server using axios.
-    const fetchChats = async() => {
-        const {data} = await axios.get('/api/chat');
-        setChats(data);
-    };
+  return (
+    <div style={{ width: "100%" }}>
+      {user && <SideDrawer />}
+      <Box d="flex" justifyContent="space-between" w="100%" h="91.5vh" p="10px">
+        {user && <MyChats fetchAgain={fetchAgain} />}
+        {user && (
+          <Chatbox fetchAgain={fetchAgain} setFetchAgain={setFetchAgain} />
+        )}
+      </Box>
+    </div>
+  );
+};
 
-    // Using useEffect to initiate the chat fetch when the component mounts.
-    useEffect(() => {
-        fetchChats();
-    }, [])
-
-    // Rendering the list of chats.
-    return (
-        <div>
-            {chats.map((chat) => (
-                <div key={chat._id}>{chats.chatName}</div>
-            ))}
-        </div>
-    )
-}
-
-// Exporting ChatPage component for use in other parts of the app.
-export default ChatPage;
+export default Chatpage;

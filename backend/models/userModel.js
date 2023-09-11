@@ -1,13 +1,15 @@
 // Importing the mongoose library
 const mongoose = require('mongoose');
 
+const bcrypt = require('bcryptjs');
+
 // Creating a new schema for users
 const userSchema = mongoose.Schema({
     // Name of the user, which is a required field
     name: { type: String, required: true },
 
     // Email of the user, which is a required field
-    email: { type: String, required: true },
+    email: { type: String, required: true, unique: true},
 
     // Password of the user, which is a required field
     password: { type: String, required: true },
@@ -21,6 +23,19 @@ const userSchema = mongoose.Schema({
 {
     // Enable timestamps (createdAt and updatedAt fields)
     timestamps: true,
+});
+
+userSchema.methods.matchPassword=async function (enteredPassowrd) {
+    return await bcrypt.compare(enteredPassowrd, this.password);
+}
+
+userSchema.pre('save',async function (next) {
+    if (!this.isModified) {
+        next();
+    }
+    
+    const salt = await bcrypt.genSalt(10);
+    this.password = await bcrypt.hash(this.password, salt);
 });
 
 // Creating a new User model using the user schema

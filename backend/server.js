@@ -4,6 +4,7 @@ const { chats } = require("./data/data"); // Mock chat data
 const dotenv = require("dotenv");         // To handle environment variables
 const connectDB = require("./config/db");
 const userRoutes = require('./routes/userRoutes');
+const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 
 // Loading environment variables
 dotenv.config();
@@ -21,7 +22,12 @@ app.get("/", (req, res) => {
     res.send("API is Running");
 });
 
-app.use('/api/user',userRoutes)
+app.use('/api/user',userRoutes);
+
+app.use(notFound);
+app.use(errorHandler);
+
+
 // Defining the port the server will run on
 const PORT = process.env.PORT || 5000;
 

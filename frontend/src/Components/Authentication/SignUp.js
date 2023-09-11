@@ -11,7 +11,7 @@ const Signup = () => {
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
   const toast = useToast();
-  //const history = useHistory();
+  const history = useHistory();
 
   const [name, setName] = useState();
   const [email, setEmail] = useState();

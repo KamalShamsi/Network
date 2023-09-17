@@ -1,22 +1,22 @@
-/* Importing the 'Work Sans' font from Google Fonts with a weight of 300. */
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
 
-/* Styling the App class. */
 .App {
-    /* Ensuring the App takes up at least the full viewport height. */
-    min-height: 100vh;
-    
-    /* Using flex layout for the App's content. */
-    display: flex;
-    
-    /* Setting the background image of the App to 'HomePageBackground.jpg'. */
-    background-image: url("./HomePageBackground.jpg");
-    
-    /* Making sure the background image covers the full container. */
-    background-size: cover;
-    
-    /* Centering the background image. */
-    background-position: center;
+  min-height: 100vh;
+  display: flex;
+  background-image: url("./HomePageBackground.jpg");
+  background-position: center;
+  background-size: cover;
+}
 
-    color:black;
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.281);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

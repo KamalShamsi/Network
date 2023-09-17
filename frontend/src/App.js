@@ -7,10 +7,13 @@ import { Route } from "react-router-dom";
 // Importing page components
 import HomePage from "./Pages/HomePage";
 import ChatPage from "./Pages/ChatPage";
+import { ChakraProvider } from "@chakra-ui/react";
+
 
 // Main App component
 function App() {
   return (
+    <ChakraProvider>
     <div className="App">
       {/* Defining a route for the home page. "exact" ensures this route is matched only if the path is exactly "/". */}
       <Route path="/" component={HomePage} exact />
@@ -18,6 +21,7 @@ function App() {
       {/* Defining a route for the chat page. */}
       <Route path="/chats" component={ChatPage} />
     </div>
+    </ChakraProvider>
   );
 }
 

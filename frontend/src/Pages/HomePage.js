@@ -11,8 +11,8 @@ import {
     Flex
 } from "@chakra-ui/react";
 
-import Login from "../Components/Authentication/Login";
-import SignUp from "../Components/Authentication/SignUp";
+import Login from "../components/Authentication/Login";
+import SignUp from "../components/Authentication/SignUp";
 
 // Define the Homepage functional component
 function Homepage() { 
